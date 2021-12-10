@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from './button';
+import {Button} from '.';
 
 const ButtonStory = {
   title: 'Components/Atoms/Buttons',
@@ -10,7 +10,10 @@ const Template = (args) => <Button {...args}>{args.text}</Button>;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  text: 'Sign in',
+  text: "Let's do it",
+  variant: '',
+  disabled: false,
+  loading: false,
 };
 
 export default ButtonStory;
