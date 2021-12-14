@@ -2,7 +2,13 @@ import {createStitches} from '@stitches/react';
 
 export const {styled} = createStitches({
   theme: {
-    colors: {},
+    colors: {
+      primary: '#443DF6',
+      secondary: '#ECEBFE',
+      black: '#000000',
+      white: '#FFFFFF',
+      error: '#C5292A',
+    },
     fontSizes: {},
   },
   utils: {

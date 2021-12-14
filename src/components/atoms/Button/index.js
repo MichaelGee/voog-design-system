@@ -30,11 +30,11 @@ const Spinner = styled('span', {
 export const Box = styled('button', {
   appearance: 'none',
   border: 'none',
-  fontSize: '14px',
-  borderRadius: '0.49rem',
+  fontSize: '12px',
+  borderRadius: '10px',
   paddingX: '23px',
-  paddingY: '18px',
-  backgroundColor: '#443DF6',
+  paddingY: '16px',
+  backgroundColor: '$primary',
   color: '#fff',
   cursor: 'pointer',
   '&:hover': {
@@ -53,7 +53,7 @@ export const Box = styled('button', {
   variants: {
     variant: {
       alternative: {
-        backgroundColor: '#ECEBFE',
+        backgroundColor: '$secondary',
         color: '#5953F7',
         '&:hover': {
           backgroundColor: '#D1CEFD',
