@@ -98,15 +98,15 @@ const Info = styled('p', {
   marginTop: '8px',
 });
 
-export const TextField = (props) => {
+export const TextField = ({error, type, label, info, ...props}) => {
   return (
     <Box width='100%'>
-      <InputGroup variant={props.error && 'error'}>
-        <Input variant={props.error && 'error'} type={props.type} {...props} />
-        <Label variant={props.error && 'error'}>{props.label}</Label>
+      <InputGroup variant={error && 'error'}>
+        <Input variant={error && 'error'} type={type} {...props} />
+        <Label variant={error && 'error'}>{label}</Label>
       </InputGroup>
-      {props.error && <Error>{props.error}</Error>}
-      {props.info && !props.error && <Info>{props.info}</Info>}
+      {error && <Error>{error}</Error>}
+      {info && !error && <Info>{info}</Info>}
     </Box>
   );
 };
