@@ -13,6 +13,7 @@ TextInput.args = {
   type: 'text',
   label: 'Email',
   error: '',
+  info: '',
 };
 
 export default TextFieldStory;

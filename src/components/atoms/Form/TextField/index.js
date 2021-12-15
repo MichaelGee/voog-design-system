@@ -69,7 +69,7 @@ const Input = styled('input', {
 const Label = styled('label', {
   position: 'absolute',
   backgroundColor: 'transparent',
-  padding: '0.6rem',
+  padding: '0.6rem 1rem',
   lineHeight: '1.4375em',
   top: '0',
   left: '0',
@@ -84,8 +84,15 @@ const Label = styled('label', {
   },
 });
 
-const Info = styled('p', {
+const Error = styled('p', {
   color: '$error',
+  fontSize: '12px',
+  marginLeft: '8px',
+  marginTop: '8px',
+});
+
+const Info = styled('p', {
+  color: '#8D9091',
   fontSize: '12px',
   marginLeft: '8px',
   marginTop: '8px',
@@ -98,7 +105,8 @@ export const TextField = (props) => {
         <Input variant={props.error && 'error'} type={props.type} {...props} />
         <Label variant={props.error && 'error'}>{props.label}</Label>
       </InputGroup>
-      {props.error && <Info>{props.error}</Info>}
+      {props.error && <Error>{props.error}</Error>}
+      {props.info && !props.error && <Info>{props.info}</Info>}
     </Box>
   );
 };
